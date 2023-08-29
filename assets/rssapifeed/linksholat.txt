@@ -1,0 +1,1 @@
+https://api.myquran.com/v1/sholat/jadwal/1301/2022/12/25

@@ -1,0 +1,89 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+.theme-default #slider {
+    margin:0px auto 0 auto;
+    width:980px; 
+    margin-top: 5px;
+    height:307px;
+    margin: 5px auto 0;
+    z-index: 3;
+       
+    
+}
+
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(../img/loading.gif) no-repeat 50% 50%;
+	
+	
+   
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+
+}
+
+#navholder {
+	width: 122px;
+	height: 32px;
+	position: relative;
+	top: 0px;
+	left:48%;
+	margin-top: -32px;
+	
+	
+
+}
+
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+	cursor:pointer;
+	
+}
+
+.theme-default .nivo-controlNav {
+	/*background: url("../img/bg.png") no-repeat scroll 0 0 transparent;*/
+	width:138px
+	height:40px;
+	position:absolute;
+	left:50%;
+	bottom: 0px;
+	padding:18px 44px 0 35px;
+    margin-left:-85px; /* Tweak this to center bullets */
+    z-index:20;
+    
+}
+
+
+.theme-default .nivo-controlNav a {
+	margin-left: 0px;
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(../img/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+	
+	
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivoSlider a.nivo-imageLink {
+    
+}
+
+
+
+
