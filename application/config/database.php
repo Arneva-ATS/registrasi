@@ -80,10 +80,9 @@ $db['default'] = array(
 	'password' => 'register123456789',
 	'database' => 'arnevaco_register',
 	//UNTUK LOKAL EDIT
-	//'username' => 'arnevaco_register',
-	//'password' => 'register123456789',
-	//'database' => 'arnevaco_register',
-	//
+	//'username' => 'root',
+	//'password' => '',
+	//'database' => 'register',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
