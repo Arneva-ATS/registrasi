@@ -92,7 +92,8 @@ class Koperasi_primer_model extends CI_Model
 	$this->db->or_like('no_hp_wa', $q);
 	$this->db->limit($limit, $start);
         //return $this->db->get($this->table)->result();
-        return $this->db->get('vw_primer')->result();
+        //return $this->db->get('vw_primer')->result();
+        return $this->db->query("select `arnevaco_register`.`koperasi_primer`.`niki` AS `niki`,`arnevaco_register`.`koperasi_primer`.`nisat` AS `nisat`,`arnevaco_register`.`koperasi_primer`.`nirim` AS `nirim`,`arnevaco_register`.`koperasi_primer`.`nama_koperasi_primer` AS `nama_koperasi_primer`,`arnevaco_register`.`koperasi_primer`.`nama_depan` AS `nama_depan`,`arnevaco_register`.`koperasi_primer`.`nama_belakang` AS `nama_belakang`,`arnevaco_register`.`koperasi_primer`.`kode_propinsi` AS `kode_propinsi`,`arnevaco_register`.`koperasi_primer`.`kode_kabupaten_kota` AS `kode_kabupaten_kota`,`arnevaco_register`.`koperasi_primer`.`no_hp_wa` AS `no_hp_wa`,`arnevaco_register`.`koperasi_pusat`.`nisat` AS `nisats`,`arnevaco_register`.`koperasi_induk`.`niki` AS `nikis`,`arnevaco_register`.`koperasi_induk`.`nama_koperasi_induk` AS `nama_koperasi_induk`,`arnevaco_register`.`provinsi`.`nama_prop` AS `nama_prop`,`arnevaco_register`.`kabkota`.`nama_kabkota` AS `nama_kabkota` from ((((`arnevaco_register`.`koperasi_primer` join `arnevaco_register`.`koperasi_pusat`) join `arnevaco_register`.`koperasi_induk`) join `arnevaco_register`.`provinsi`) join `arnevaco_register`.`kabkota`) where `arnevaco_register`.`koperasi_induk`.`niki` = `arnevaco_register`.`koperasi_primer`.`niki` and `arnevaco_register`.`koperasi_pusat`.`nisat` = `arnevaco_register`.`koperasi_primer`.`nisat` and `arnevaco_register`.`provinsi`.`id_propinsi` = `arnevaco_register`.`koperasi_primer`.`kode_propinsi` and `arnevaco_register`.`kabkota`.`id_kabkota` = `arnevaco_register`.`koperasi_primer`.`kode_kabupaten_kota`;")->result();
     }
 
     // insert data
