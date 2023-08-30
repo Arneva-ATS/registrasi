@@ -42,7 +42,7 @@
             <div class="col-md-4" style="padding: 0px;">
                 <div class="card">
                     <div class="card-header">
-                        <img src="<?php echo base_url('assets/img/logo_rki_new 1.png');?>">
+                        <img src="<?php echo base_url('assets/images/logo/logo_rki_new 1.png');?>">
                         <br>
                         <h5>Selamat Datang</h5>
                         <span>Silahkan masukkan akun Anda</span>
@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-md-8" style="padding: 0px;">
-                <img src="<?php echo base_url('assets/img/login.png');?>" style="width:100%; height:100%; object-fit:cover;">
+                <img src="<?php echo base_url('assets/images/logo/login.png');?>" style="width:100%; height:100%; object-fit:cover;">
             </div>
         </div>
         <script type="text/javascript" src="<?php echo base_url('assets/bower_components/jquery/js/jquery.min.js');?>"></script>

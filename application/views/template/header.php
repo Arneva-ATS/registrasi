@@ -63,7 +63,7 @@
                                 <i class="feather icon-menu"></i>
                             </a>
                             <a href="<?php echo base_url('beranda');?>">
-                                <img class="img-fluid" src="<?php echo base_url('assets/img/logo_rki_new 1.png');?>" alt="Theme-Logo">
+                                <img class="img-fluid" src="<?php echo base_url('assets/images/logo/logo_rki_new 1.png');?>" alt="Theme-Logo">
                             </a>
                             <a class="mobile-options">
                                 <i class="feather icon-more-horizontal"></i>

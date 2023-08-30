@@ -3,7 +3,7 @@
                 <div class="pcoded-wrapper">
                     <nav class="pcoded-navbar" pcoded-header-position="relative">
                         <div class="pcoded-inner-navbar main-menu" style="display: block;margin: 10px 0;padding: 10px;width: 100%;">
-                            <img src="<?php echo base_url('assets/img/Ellipse 4.png');?>">
+                            <img src="<?php echo base_url('assets/images/logo/Ellipse 4.png');?>">
                             <div class="pcoded-navigatio-lavel">RKI</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu">
