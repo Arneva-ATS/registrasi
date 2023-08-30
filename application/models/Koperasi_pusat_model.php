@@ -73,7 +73,28 @@ class Koperasi_pusat_model extends CI_Model
 	$this->db->or_like('no_hp_wa', $q);
 	$this->db->limit($limit, $start);
         //return $this->db->get('$this->table')->result();
-        return $this->db->get('vw_pusat')->result();
+        //return $this->db->get('vw_pusat')->result();
+return $this->db->query("SELECT
+`arnevaco_register`.`koperasi_pusat`.`niki` AS `niki`,
+`arnevaco_register`.`koperasi_pusat`.`nisat` AS `nisat`,
+`arnevaco_register`.`koperasi_pusat`.`nama_koperasi_pusat` AS `nama_koperasi_pusat`,
+`arnevaco_register`.`koperasi_pusat`.`nama_depan` AS `nama_depan`,
+`arnevaco_register`.`koperasi_pusat`.`nama_belakang` AS `nama_belakang`,
+`arnevaco_register`.`koperasi_pusat`.`kode_propinsi` AS `kode_propinsi`,
+`arnevaco_register`.`koperasi_pusat`.`no_hp_wa` AS `no_hp_wa`,
+`arnevaco_register`.`koperasi_induk`.`niki` AS `nikis`,
+`arnevaco_register`.`koperasi_induk`.`nama_koperasi_induk` AS `nama_koperasi_induk`,
+`arnevaco_register`.`provinsi`.`nama_prop` AS `nama_prop`
+FROM
+(
+    (
+        `arnevaco_register`.`koperasi_pusat`
+    JOIN `arnevaco_register`.`koperasi_induk`
+    )
+JOIN `arnevaco_register`.`provinsi`
+)
+WHERE
+`arnevaco_register`.`koperasi_induk`.`niki` = `arnevaco_register`.`koperasi_pusat`.`niki` AND `arnevaco_register`.`provinsi`.`id_propinsi` = `arnevaco_register`.`koperasi_pusat`.`kode_propinsi`")->result();
         //return $this->db->query("SELECT koperasi_pusat.*,koperasi_induk.niki AS 'nikis',koperasi_induk.nama_koperasi_induk,provinsi.nama_prop FROM koperasi_pusat,koperasi_induk,provinsi WHERE koperasi_induk.niki=koperasi_pusat.niki AND provinsi.id_propinsi=koperasi_pusat.kode_propinsi")->result();
     }
     // insert data
